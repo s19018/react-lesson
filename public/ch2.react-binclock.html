@@ -9,17 +9,18 @@
 <script type="text/babel">
 setInterval(update, 1000)
 
+
 function update () {
-  const now = new Date();
   const hh = z2(now.getHours())
   const mm = z2(now.getMinutes())
   const ss = z2(now.getSeconds())
   const binStr = hh + mm + ss
+  const now = new Date();
   const style0 = { color: 'blue' }
   const style1 = { color: 'red' }
   const lines = []
-  for (let i = 0; i < binStr.length; i++) {
-    const v = parseInt(binStr.substr(i, 1))
+  for (let i = 0; i < sum.binStr.length; i++) {
+    const v = parseInt(sum.binStr.substr(i, 1))
     const bin = "0000" + v.toString(2)
     const bin8 = bin.substr(bin.length - 4, 4)
     for (let j = 0; j < bin8.length; j++) {
